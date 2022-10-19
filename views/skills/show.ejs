@@ -8,15 +8,10 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
-    <h1>All Skills</h1>
-    <ul>
-        <% skills.forEach(function(s) { %>
-            <li>
-                <a href="/skills/<%= s.id %>"><%= s.skill %></a>
-                    -
-                <%= s.acquire ? 'true' : 'false' %>
-            </li>
-        <% }); %>
-    </ul>
+    <a href="/">Home</a>
+    |
+    <a href="/skills">All Skills</a>
+   <h3><%= skill.skill %></h3>
+   <h3>Acquired: <%= skill.acquire ? 'Yes' : 'No' %></h3>
 </body>
 </html>

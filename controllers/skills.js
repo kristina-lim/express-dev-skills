@@ -10,7 +10,7 @@ module.exports = {
 };
 
 function update(req, res) {
-    req.body.done = !!req.body.done;
+    req.body.acquire = !!req.body.acquire;
     Skill.update(req.params.id, req.body);
     res.redirect(`/skills/${req.params.id}`);
 }
